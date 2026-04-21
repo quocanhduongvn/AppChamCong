@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chấm Công</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- HEADER -->
+        <header class="app-header">
+            <div class="user-selector" style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+                <input type="text" class="selector-btn" id="user-name" value="NAME" style="margin: 0;">
+                <button id="settings-btn" class="settings-btn"
+                    style="margin: 0; background: #333; border: 1px solid #444; border-radius: 8px; padding: 8px 15px; font-size: 15px; font-family: inherit; font-weight: 500; color: #00ff00; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"><i
+                        class="fa-solid fa-calculator"></i> Tính Lương</button>
+            </div>
+        </header>
+
+        <!-- HƯỚNG DẪN SỬ DỤNG -->
+        <details
+            style="margin: 10px 15px; background: #2a2a35; padding: 10px; border-radius: 8px; font-size: 13px; color: #ccc; border: 1px solid #444;">
+            <summary style="cursor: pointer; color: #00ff00; font-weight: bold;"><i class="fa-solid fa-circle-info"></i>
+                Hướng dẫn sử dụng nhanh</summary>
+            <div style="margin-top: 10px; line-height: 1.6;">
+                1. <b>Sửa Tên & Cột:</b> Bấm trực tiếp vào chữ "NAME" để đổi tên. Bấm vào các thẻ "100%", "150%" để đổi
+                tên loại công.<br>
+                2. <b>Nhập dữ liệu:</b> Gõ số giờ làm (VD: 8, 10.5) hoặc số giờ tăng ca (VD: 3, 2.5) vào các ô màu theo
+                từng
+                ngày.<br>
+                3. <b>Tính Lương:</b> Bấm nút <b><i class="fa-solid fa-calculator"></i>Tính Lương</b> để cài đặt
+                <i>Lương cơ
+                    bản</i> và xem máy tự động tính tổng tiền.
+            </div>
+        </details>
+
+        <!-- BẢNG CHẤM CÔNG -->
+        <div class="table-container">
+            <table class="timesheet">
+                <thead>
+                    <tr class="header-row">
+                        <th class="current-month-display" id="display-month" colspan="2">4.2026</th>
+                        <th><input type="text" class="header-input" id="col-header-1" value="100%"></th>
+                        <th><input type="text" class="header-input" id="col-header-2" value="150%"></th>
+                        <th><input type="text" class="header-input" id="col-header-3" value="30%"></th>
+                        <th><input type="text" class="header-input" id="col-header-4" value="200%"></th>
+                        <th class="col-end"><input type="text" class="header-input" id="col-header-5" value="100%"></th>
+                    </tr>
+                    <tr class="total-row">
+                        <th class="text-center font-bold" colspan="2">Tổng</th>
+                        <th class="total-val col-1" id="total-col-1"></th>
+                        <th class="total-val col-2" id="total-col-2"></th>
+                        <th class="total-val col-3" id="total-col-3"></th>
+                        <th class="total-val col-4" id="total-col-4"></th>
+                        <th class="total-val col-5 col-end" id="total-col-5"></th>
+                    </tr>
+                </thead>
+                <tbody id="timesheet-body">
+                    <!-- Javascript Data -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FOOTER NAV -->
+        <footer class="app-footer">
+            <div class="month-nav" id="month-nav">
+                <!-- Javascript Data -->
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
